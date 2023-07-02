@@ -48,7 +48,9 @@ const BebidasProvider = ({children})=>{
         getRecipe()
     },[bebidaId])
 
-
+    useEffect(() => {
+        localStorage.setItem('favorit', JSON.stringify(favoriteBebidas));
+    }, [favoriteBebidas]);
 
     const handleBebidaIdClick = (id) =>{
         setBebidaId(id)
@@ -66,24 +68,22 @@ const BebidasProvider = ({children})=>{
     const addFavorites = (idDrink)=>{
     
         const bebidaSelected = bebidas.filter(bebida => bebida.idDrink === idDrink);
-        
+
         if(favoriteBebidas.some(bebida => bebida.idDrink === idDrink)){
             console.log('lo tengo no lo agrego')
-            setFavoriteBebidas([...favoriteBebidas])
+            setFavoriteBebidas(prevFavoriteBebidas => [...prevFavoriteBebidas]);
             console.log(favoriteBebidas)
-            localStorage.setItem('favorit', JSON.stringify([...favoriteBebidas]))
+        
         }else{
             console.log('no lo tengo, lo agrego')
-            setFavoriteBebidas([...favoriteBebidas, bebidaSelected[0]])
+           setFavoriteBebidas(prevFavoriteBebidas => [...prevFavoriteBebidas, bebidaSelected[0]]);
             console.log(favoriteBebidas)
-            localStorage.setItem('favorit', JSON.stringify(favoriteBebidas))
         }
         
     }
     const deleteBebida = (idDrink) =>{
         const bebidaSelected = favoriteBebidas.filter(bebida => bebida.idDrink !== idDrink);
-        setFavoriteBebidas(bebidaSelected)
-        localStorage.setItem('favorit', JSON.stringify([...favoriteBebidas]))
+        setFavoriteBebidas([...bebidaSelected])
     }
 
     return(
@@ -101,7 +101,8 @@ const BebidasProvider = ({children})=>{
                 favoritesModal,
                 handleAddFavorite,
                 favoriteBebidas,
-                deleteBebida
+                deleteBebida,
+                bebidaId
             }}
         >
             {children}

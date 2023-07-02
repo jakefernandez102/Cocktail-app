@@ -5,7 +5,7 @@ import { useBebidas } from '../hooks/useBebidas';
 /* eslint-disable react/prop-types */
 const BebidaFavorita = ({bebida}) => {
 
-        const {deleteBebida} = useBebidas()
+        const {deleteBebida,handleModalClick,handleBebidaIdClick,handleFavoritesModal} = useBebidas()
         
   return (
     <Col
@@ -30,6 +30,19 @@ const BebidaFavorita = ({bebida}) => {
                 </Card.Header>
             <Card.Body className={'d-flex flex-column justify-content-end '}>
 
+                <Button 
+                    variant={'warning'}
+                    className={'w-100 text-uppercase mt-2'}
+                    style={{fontSize:'10px'}}
+                    onClick={( ) => {
+                        handleFavoritesModal()
+                        handleModalClick()
+                        handleBebidaIdClick(bebida.idDrink)
+                        }
+                    }
+                >
+                    View Favorite
+                </Button>
                 <Button 
                     variant={'danger'}
                     className={'w-100 text-uppercase mt-2'}

@@ -48,7 +48,7 @@ const Formulario = () => {
                             className='fw-bold'
                             htmlFor='name'
                         >
-                            Coctail Name:
+                             What kind of drink?
                         </Form.Label>
                         <Form.Control
                             id='name'

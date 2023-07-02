@@ -16,20 +16,22 @@ function App() {
       <CategoriasProvider>
         <BebidasProvider>
 
-            <Header/>
           <div 
-            className='d-flex flex-column justify-content-between'
-              
+            style={{height:'100vh'}}
+            className=' d-flex flex-column justify-content-between' 
           >
+            <div>
+              <Header/>
 
-            <Container
-              className={'mt-5'}
-              >
-              <Formulario/>
-              <ListadoBebidas/>
-              <ModalBebida/>
-              <FavoritesModal/>
-            </Container>
+              <Container
+                className={'mt-5'}
+                >
+                <Formulario/>
+                <ListadoBebidas/>
+                <ModalBebida/>
+                <FavoritesModal/>
+              </Container>
+            </div>
 
             <Foother/>
           </div>

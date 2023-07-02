@@ -48,3 +48,51 @@ footer p {
 .card-image:hover {
   transform: rotate(5deg) scale(1.1);
 }
+
+
+.btn-btn--star p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.icon {
+  width: 30px;
+}
+
+.btn-star path {
+  fill: transparent;
+  stroke-width: 10;
+  stroke: black;
+}
+
+.icon path {
+  stroke-dasharray: 748;
+  stroke-dashoffset: 0;
+}
+
+.btn-btn--star:hover .icon path {
+  animation: animate-heart .5s linear forwards;
+}
+
+@keyframes animate-heart {
+  0% {
+    stroke-dashoffset: 0;
+  }
+
+  40% {
+    stroke-dashoffset: 748;
+  }
+
+  80% {
+    stroke-dashoffset: 1496;
+    fill: transparent;
+  }
+
+  100% {
+    stroke-dashoffset: 1496;
+    fill: black;
+  }
+}
