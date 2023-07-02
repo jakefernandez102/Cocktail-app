@@ -8,8 +8,8 @@ const Header = () => {
             Cockta<img 
                     width="30" 
                     height="30" 
-                    src="../public/img/icons8-alcohol-67.png" 
-                    alt="external-alcohol-glasses-of-alcohol-flat-icons-inmotus-design"
+                    src="../../public/img/cocktail.png" 
+                    alt="Logo image"
                     />
             l - App
         </h1>
