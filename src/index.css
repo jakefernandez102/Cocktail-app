@@ -1,0 +1,50 @@
+body {
+  height: 100vh;
+
+}
+
+
+
+header,
+footer {
+  background-color: #EC3A49;
+  color: white;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 900;
+}
+
+footer {
+
+  bottom: 0;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+  font-size: .5rem;
+  padding: 0;
+  margin: 0;
+}
+
+footer p {
+  text-decoration: none;
+  color: #fff;
+  font-size: .7rem;
+  padding: 0;
+  margin: 0;
+}
+
+.card-image {
+  transition: all 300ms ease-in-out;
+}
+
+.card-image:hover {
+  transform: rotate(5deg) scale(1.1);
+}
