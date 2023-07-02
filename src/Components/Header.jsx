@@ -9,7 +9,7 @@ const Header = () => {
 
                     width="30" 
                     height="30" 
-                    src="../../public/img/cocktail.svg" 
+                    src="../../public/cocktail.svg" 
                     alt="Logo image"
                     />
             l - App
