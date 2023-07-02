@@ -5,10 +5,11 @@ const Header = () => {
         <h1 
             className='d-flex justify-content-center align-items-center'
         >
-            Cockta<img 
+            Cockta<img
+
                     width="30" 
                     height="30" 
-                    src="../../public/img/cocktail.png" 
+                    src="../../public/img/cocktail.svg" 
                     alt="Logo image"
                     />
             l - App
